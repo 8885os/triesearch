@@ -179,7 +179,6 @@ function checkIfEnter(event){
         searchbtn.click();
     } else{
         newWord = searchbar.value;
-        console.log(newWord)
         if(newWord !== ""){
             let output = trie.find(newWord);
             if (output.length > 0){
