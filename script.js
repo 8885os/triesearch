@@ -155,7 +155,6 @@ var searchbtn = document.getElementById('hdnbtn');
 var searchcontainer = document.getElementById('search-contain');
 var popoutcolour = "rgba(255, 252, 252, 0.437)";
 
-console.log(searchbar)
 searchbar.addEventListener('keyup', checkIfEnter);
 searchbtn.addEventListener('click', getval);
 
@@ -163,7 +162,6 @@ searchbtn.addEventListener('click', getval);
 function getval(event){
     newWord = searchbar.value
     trie.insert(newWord);
-    console.log(newWord)
 }
 
 function flashBar(){
@@ -176,7 +174,6 @@ function flashBar(){
 
 
 function checkIfEnter(event){
-    console.log("HERERERER",document.getElementsByTagName("ul").length)
     if(event.key === "Enter"){
         flashBar();
         searchbtn.click();
@@ -184,12 +181,8 @@ function checkIfEnter(event){
         newWord = searchbar.value;
         console.log(newWord)
         if(newWord !== ""){
-
             let output = trie.find(newWord);
-            console.log("PLS NO",output.length);
-            console.log(document.getElementsByTagName("ul").length)
             if (output.length > 0){
-                console.log(document.getElementsByTagName("ul").length)
                 if (document.getElementsByTagName("ul").length > 0){
                     ul.remove();
                 }
@@ -197,14 +190,11 @@ function checkIfEnter(event){
                 ul = document.createElement("ul")
                 searchcontainer.appendChild(ul)
                 output = output.slice(0,N);
-                console.log("HERE",output)
                 for (let i = 0;i < output.length;i++){
-                    console.log(i)
                     button = document.createElement("button");
                     button.id= "testbtn";
                     button.style.backgroundColor = popoutcolour;
                     ul.appendChild(button)
-                    console.log(output[i])
                     button.textContent = output[i];
                 }
             
