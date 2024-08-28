@@ -1,102 +1,159 @@
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
 }
 
-body{
-    position: relative;
-    background: linear-gradient(to right, rgb(57, 129, 245),rgb(187, 127, 247));
-    
+body {
+	position: relative;
+	background: linear-gradient(to right, rgb(57, 129, 245), rgb(187, 127, 247));
+	font-family: 'inter', sans-serif;
+	color: white;
+	height: 100vh;
 }
-.search-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 5rem;
+	height: 100vh;
 }
-input{
-    position: relative;
-    width: 400px;
-    height: 30px;
-    border-radius: 8px;
-    border-color: transparent;
-    outline: none;
-}
-
-h1{
-    position: fixed;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgb(17, 243, 179);
-    font-weight: 1000;
-    font-family:monospace; 
-    text-decoration: underline;
-    
-}
-h3{
-    position: fixed;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgb(17, 243, 179);
-    font-size: 25px;
-    text-align: center;
-}
-p{
-    position: fixed;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family:  sans-serif;
-    font-size: 20px;
-    width: 300px;
-    text-align: center;
-    color: rgb(34, 234, 178);
-}
-.hidden{
-    background-color: brown;
-    position: fixed;
-    left: -1000px;
-
-}
-#testbtn{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0rem;
-    width: 400px;
-    height:25px;
-    background-color: transparent;
-    border-width: 3px;
-    border-radius: 5px;
-    border-color: transparent;
-    font-family: Verdana, Tahoma, sans-serif;
-}
-ul{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+.search-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	height: fit-content;
 }
 
-.searchinput{
-    display: flex;
-    position: relative;
-    margin-top: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
+.page-text {
+	display: flex;
+	justify-content: center;
+	margin-top: relative;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 2rem;
 }
-.hero{
-   display: flex;
-   justify-content: center;
-   margin-top: relative;
+
+h1 {
+	position: relative;
+	color: rgb(255, 255, 255);
 }
-.flash{
-    background-color: rgba(255, 255, 255, 0.3);
+h3 {
+	position: relative;
+	color: rgb(255, 255, 255);
+	font-size: 25px;
+	text-align: center;
+}
+p {
+	font-size: 20px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+}
+.hidden {
+	background-color: brown;
+	position: fixed;
+	left: -1000px;
+}
+#testbtn {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 2rem;
+	align-items: center;
+	position: relative;
+	background-color: transparent;
+}
+button {
+	border-width: 3px;
+	border-radius: 5px;
+	border-color: transparent;
+}
+ul {
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	margin-top: 2px;
+	gap: 0.2rem;
+}
+
+.searchinput {
+	position: relative;
+	width: 80vw;
+	height: 2rem;
+	border-radius: 8px;
+	border-color: transparent;
+	outline: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	padding-left: 0.3rem;
+}
+.flash {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+.removebtn {
+	cursor: pointer;
+	color: red;
+	padding: 0.3rem;
+	background-color: transparent;
+}
+.button-holder {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	border-width: 3px;
+	border-radius: 5px;
+	border-color: transparent;
+	width: 100%;
+}
+
+.title-holder {
+	border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+	padding-bottom: 1rem;
+	width: 100%;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+.title {
+	margin-top: 4rem;
+	margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+	.hero {
+		height: auto;
+		width: 100%;
+		gap: 3rem;
+		align-items: center;
+	}
+	h1 {
+		font-size: 20px;
+	}
+	body {
+		font-size: 16px;
+	}
+	p {
+		width: 80%;
+	}
+	.searchinput {
+		width: 90%;
+	}
+	.search-container {
+		margin-top: 3rem;
+	}
+	/* Add more styles here as needed */
 }
